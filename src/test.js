@@ -22,7 +22,7 @@ import {
   store.dispatch(addTodo('Learn about store'))
   store.dispatch(toggleTodo(0))
   store.dispatch(toggleTodo(1))
-  store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED))
+  store.dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL))
   
   // Stop listening to state updates
   unsubscribe()

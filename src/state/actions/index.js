@@ -20,14 +20,38 @@ export const VisibilityFilters = {
  * action creators
  */
 
-export function addTodo(text) {
+export function addTodoActionCreator(text) {
   return { type: ADD_TODO, text }
 }
 
-export function toggleTodo(index) {
+export function addTodo(text) {
+  return function (dispatch) {
+    setTimeout(() => {
+      dispatch(addTodoActionCreator(text))
+    }, 2500)
+  }
+}
+
+export function toggleTodoActionCreator(index) {
   return { type: TOGGLE_TODO, index }
 }
 
-export function setVisibilityFilter(filter) {
+export function toggleTodo(index) {
+  return function (dispatch) {
+    setTimeout(() => {
+      dispatch(toggleTodoActionCreator(index))
+    }, 2500)
+  }
+}
+
+export function setVisibilityFilterActionCreator(filter) {
   return { type: SET_VISIBILITY_FILTER, filter }
+}
+
+export function setVisibilityFilter(filter) {
+  return function (dispatch) {
+    setTimeout(() => {
+      dispatch(setVisibilityFilterActionCreator(filter))
+    }, 2500)
+  }
 }
