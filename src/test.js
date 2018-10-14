@@ -3,8 +3,10 @@ import {
     toggleTodo,
     setVisibilityFilter,
     VisibilityFilters
-  } from '../State/actions'
-  import store from '../State/Store'
+  } from './state/actions'
+
+  import store from './state/Store'
+  
   // Log the initial state
   console.log(store.getState())
   
